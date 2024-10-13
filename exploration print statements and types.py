@@ -1,0 +1,5 @@
+print(290.73)
+print('"He replied, \"Never mind\", and shut the door."')
+print(True)
+print(type(99))
+print(type("What is your quest?"))

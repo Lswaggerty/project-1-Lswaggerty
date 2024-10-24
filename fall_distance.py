@@ -15,5 +15,3 @@ def fall_distance(time_in_seconds):
     g = 9.8  # gravitational constant in meters per second squared
     distance = 0.5 * g * (time_in_seconds ** 2)
     return distance
-dist = fall_distance(3.2)
-print(dist)

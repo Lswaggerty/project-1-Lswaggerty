@@ -21,6 +21,3 @@ def multiply_recursive(multiplier, multiplicand):
     return multiplier + multiply_recursive(multiplier, multiplicand - 1)
 
 
-# Example usage
-result = multiply_recursive(7, 4)
-print(result)  # Expected output: 28

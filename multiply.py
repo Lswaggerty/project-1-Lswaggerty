@@ -20,6 +20,8 @@ def multiply_recursive(multiplier, multiplicand):
     # Recursive case: add multiplier to the result of multiplying multiplier by (multiplicand - 1)
     return multiplier + multiply_recursive(multiplier, multiplicand - 1)
 
+
 # Example usage
-result = multiply_recursive(7, 4)
+result = multiply_recursive(7, 4)  # This would compute 7 * 4
 print(result)  # Expected output: 28
+

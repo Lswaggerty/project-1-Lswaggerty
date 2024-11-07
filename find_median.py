@@ -2,8 +2,9 @@
 # GitHub username: Lswaggerty
 # Date: 11/6/2024
 # Description: Create a function that takes a list of numbers and returns with the median of the list of numbers
-def find_median(numbers):
-    """Return the statistical median of a list of numbers."""
+def find_median():
+    """Return the statistical median of a predefined list of numbers."""
+    numbers = [13, 7, -3, 82, 4]  # predefined list of values
     if not numbers:
         return None
     sorted_numbers = sorted(numbers)
@@ -15,7 +16,7 @@ def find_median(numbers):
         return (mid1 + mid2) / 2
 
 # Example usage
-values = [13, 7, -3, 82, 4]
-result = find_median(values)  # result should be 7
+result = find_median()  # result should be 7
 print("Median:", result)
+
 

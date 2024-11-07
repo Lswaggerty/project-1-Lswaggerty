@@ -7,12 +7,12 @@ class Person:
 
     def __init__(self, name, age):
         """Initialize the name and age of the person."""
-        self.__name = name
-        self.__age = age
+        self._name = name
+        self._age = age
 
     def get_age(self):
         """Return the age of the person."""
-        return self.__age
+        return self._age
 
 
 def std_dev(person_list):
@@ -23,4 +23,5 @@ def std_dev(person_list):
     mean_age = sum(ages) / len(ages)
     variance = sum((age - mean_age) ** 2 for age in ages) / len(ages)
     return variance ** 0.5
+
 

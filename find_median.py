@@ -1,6 +1,6 @@
 # Author: Lindsey Michelle Slagle
 # GitHub username: Lswaggerty
-# Date: 09/30/2024
+# Date: 11/6/2024
 # Description: Create a function that takes a list of numbers and returns with the median of the list of numbers
 def find_median(numbers):
     """Return the statistical median of a list of numbers."""

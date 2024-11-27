@@ -51,13 +51,21 @@ class LineSegment:
         x1, y1 = self._endpoint_1.get_x_coord(), self._endpoint_1.get_y_coord()
         x2, y2 = self._endpoint_2.get_x_coord(), self._endpoint_2.get_y_coord()
         if x1 == x2:
-            raise ValueError("Slope is undefined for vertical line segments.")
+            return None
+        if y1 == y2:
+            return 0
         return (y2 - y1) / (x2 - x1)
 
     def is_parallel_to(self, other_line_segment):
         """Return True if this LineSegment is parallel to another."""
-        try:
-            return abs(self.slope() - other_line_segment.slope()) < 0.000001
-        except ValueError:
-            return self._endpoint_1.get_x_coord() == other_line_segment.get_endpoint_1().get_x_coord()
+        if self.length() == 0 or other_line_segment.length() == 0:
+            return False
+        slope_self = self.slope()
+        slope_other = other_line_segment.slope()
+        if slope_self is None and slope_other is None:
+            return True
+        if slope_self is not None and slope_other is not None:
+            return abs(slope_self - slope_other) < 0.000001
+        return False
+
 

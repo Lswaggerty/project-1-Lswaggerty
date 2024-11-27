@@ -59,20 +59,5 @@ class LineSegment:
         try:
             return abs(self.slope() - other_line_segment.slope()) < 0.000001
         except ValueError:
-            # Both lines are vertical and parallel
-            return True if self._endpoint_1.get_x_coord() == other_line_segment.get_endpoint_1().get_x_coord() else False
+            return self._endpoint_1.get_x_coord() == other_line_segment.get_endpoint_1().get_x_coord()
 
-
-# Example Usage
-point_1 = Point(7, 4)
-point_2 = Point(-6, 18)
-print(point_1.distance_to(point_2))  # Distance between point_1 and point_2
-
-line_seg_1 = LineSegment(point_1, point_2)
-print(line_seg_1.length())  # Length of the line segment
-print(line_seg_1.slope())  # Slope of the line segment
-
-point_3 = Point(-2, 2)
-point_4 = Point(24, 12)
-line_seg_2 = LineSegment(point_3, point_4)
-print(line_seg_1.is_parallel_to(line_seg_2))  # Check if the two line segments are parallel
